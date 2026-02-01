@@ -1,0 +1,11 @@
+# LeyApp Robots.txt
+# https://leyapp.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://leyapp.com/sitemap.xml
+
+# Crawl-delay (optional, be nice to servers)
+Crawl-delay: 1
