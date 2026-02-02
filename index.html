@@ -854,7 +854,7 @@
       <div class="container">
         <div class="nav-inner">
           <a href="#" class="logo" aria-label="LeyApp - Inicio">
-            <img src="leyapp-logo-landscape.png" alt="LeyApp" class="logo-image">
+            <img src="leyapp-logo-landscape.png" alt="LeyApp" class="logo-image" width="192" height="60">
           </a>
           <div class="nav-right">
             <div class="lang-selector">
@@ -908,9 +908,16 @@
       </div>
     </section>
 
-    <section class="section"
-      style="background: linear-gradient(to bottom, rgba(26, 15, 46, 0.2), #1a0f2e), url('spain-regularization.png'); background-size: cover; background-position: center; color: #fff; padding: 6rem 0;"
+    <section class="section" style="position: relative; overflow: hidden; color: #fff; padding: 6rem 0;"
       aria-labelledby="news-title">
+      <!-- Optimized Background Image: Loaded lazily to unblock LCP -->
+      <div style="position: absolute; top:0; left:0; width:100%; height:100%; z-index:-1;">
+        <div
+          style="position:absolute; inset:0; background: linear-gradient(to bottom, rgba(26, 15, 46, 0.2), #1a0f2e); z-index:1;">
+        </div>
+        <img src="spain-regularization.png" alt="" style="width:100%; height:100%; object-fit: cover;" loading="lazy"
+          decoding="async">
+      </div>
       <div class="container text-center">
         <div class="badge" style="background:#2DD4BF;color:#1a0f2e;border:none;margin-bottom:1.5rem" id="newsBadge">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
