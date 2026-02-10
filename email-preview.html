@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeyApp Email Preview</title>
+    <style>
+        /* Reset */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        table {
+            border-spacing: 0;
+        }
+
+        td {
+            padding: 0;
+        }
+
+        img {
+            border: 0;
+        }
+
+        /* Wrapper */
+        .wrapper {
+            width: 100%;
+            table-layout: fixed;
+            background-color: #f3f4f6;
+            padding-bottom: 40px;
+        }
+
+        /* Main Container */
+        .main {
+            background-color: #ffffff;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 600px;
+            border-spacing: 0;
+            font-family: sans-serif;
+            color: #1a0f2e;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a0f2e 0%, #2d1b4e 100%);
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        /* Content */
+        .content {
+            padding: 40px 30px;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 24px;
+            margin: 0 0 20px;
+            color: #1a0f2e;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #4b5563;
+            margin: 0 0 20px;
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: rgba(45, 212, 191, 0.1);
+            color: #0f766e;
+            border-radius: 99px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(45, 212, 191, 0.3);
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 100%);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 10px;
+            box-shadow: 0 4px 14px rgba(45, 212, 191, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #f9fafb;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .footer p {
+            font-size: 12px;
+            color: #9ca3af;
+            margin-bottom: 10px;
+        }
+
+        .social-link {
+            display: inline-block;
+            margin: 0 5px;
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <center class="wrapper">
+        <div style="height: 40px;"></div>
+
+        <table class="main" width="100%">
+            <!-- Header -->
+            <tr>
+                <td class="header">
+                    <!-- Logo Placeholder using text for now or valid absolute URL if served -->
+                    <img src="https://leyapp.es/leyapp-logo-landscape.png" alt="LeyApp" width="150"
+                        style="max-width: 150px; height: auto;">
+                </td>
+            </tr>
+
+            <!-- Body -->
+            <tr>
+                <td class="content">
+                    <div style="text-align: center;">
+                        <div class="badge">✨ Registro Confirmado</div>
+                    </div>
+
+                    <h1 style="text-align: center;">¡Gracias por unirte, [Nombre]!</h1>
+
+                    <p>Hemos recibido tu solicitud para unirte a la lista de espera de <strong>LeyApp</strong> en
+                        Barcelona. Nos alegra mucho que confíes en nosotros.</p>
+
+                    <p>Nuestro equipo está trabajando duro para verificar a los mejores abogados de extranjería y
+                        preparar la plataforma para ti.</p>
+
+                    <p>Serás de los primeros en recibir:</p>
+                    <ul style="color: #4b5563; text-align: left; margin-bottom: 30px;">
+                        <li style="margin-bottom: 10px;">Acceso anticipado a la plataforma</li>
+                        <li style="margin-bottom: 10px;">Descuentos exclusivos en tu primera consulta</li>
+                        <li style="margin-bottom: 10px;">Guías gratuitas sobre trámites de extranjería</li>
+                    </ul>
+
+                    <div style="text-align: center;">
+                        <a href="https://leyapp.es" class="btn">Visitar Sitio Web</a>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+                <td class="footer">
+                    <p>© 2026 LeyApp - Conectando extranjeros con abogados de confianza.</p>
+                    <p>
+                        <a href="#" class="social-link">Instagram</a> •
+                        <a href="#" class="social-link">Twitter</a> •
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </p>
+                    <p>Barcelona, España 🇪🇸</p>
+                </td>
+            </tr>
+        </table>
+
+        <div style="height: 40px;"></div>
+    </center>
+
+</body>
+
+</html>
