@@ -130,33 +130,44 @@
 
     <main>
         <div class="container">
-            <div class="illustration">⚖️</div>
+            <div class="illustration">
+                <img src="/leyapp-icon-purple.png" alt="LeyApp Icon" style="width: 80px; height: 80px;">
+            </div>
             <h1>404</h1>
-            <h2>Página no encontrada</h2>
-            <p>Parece que te has perdido en el papeleo. Esta página no existe.</p>
-            <a href="/" class="btn-primary">Volver al inicio</a>
+            <h2 id="title">Página no encontrada</h2>
+            <p id="text">Parece que te has perdido entre el papeleo. Esta página no existe.</p>
+            <a href="/" class="btn-primary" id="btn">Volver al inicio</a>
         </div>
     </main>
 
-    <!-- Simple script to handle 404 translation redirect if needed in future -->
+    <!-- Script to handle 404 translation -->
     <script>
-        // Optional: Check URL params or browser lang to translate this page dynamically
         const L = {
-            en: { title: "Page not found", text: "Looks like you got lost in current paperwork.", btn: "Back to Home" },
-            fr: { title: "Page non trouvée", text: "Il semble que vous soyez perdu dans la paperasse.", btn: "Retour à l'accueil" },
-            ar: { title: "الصفحة غير موجودة", text: "يبدو أنك ضللت الطريق في الأوراق.", btn: "العودة للرئيسية", dir: "rtl" }
+            es: { title: "Página no encontrada", text: "Parece que te has perdido entre el papeleo. Esta página no existe.", btn: "Volver al inicio" },
+            en: { title: "Page not found", text: "Looks like you got lost in the paperwork. This page does not exist.", btn: "Back to Home" },
+            fr: { title: "Page non trouvée", text: "Il semble que vous soyez perdu dans la paperasse. Cette page n'existe pas.", btn: "Retour à l'accueil" },
+            ar: { title: "الصفحة غير موجودة", text: "يبدو أنك ضللت الطريق بين الأوراق. هذه الصفحة غير موجودة.", btn: "العودة للرئيسية", dir: "rtl" }
         };
 
         const params = new URLSearchParams(window.location.search);
-        const lang = params.get('lang') || navigator.language.slice(0, 2);
+        // Detect browser language or use URL param
+        const userLang = navigator.language || navigator.userLanguage;
+        const langCode = params.get('lang') || (userLang ? userLang.split('-')[0] : 'es');
 
-        if (L[lang]) {
-            document.querySelector('h2').textContent = L[lang].title;
-            document.querySelector('p').textContent = L[lang].text;
-            document.querySelector('.btn-primary').textContent = L[lang].btn;
+        // Ensure we support the language
+        const supportedLangs = ['es', 'en', 'fr', 'ar'];
+        const lang = supportedLangs.includes(langCode) ? langCode : 'es';
+
+        // Apply translation if available and different from default
+        if (L[lang] && lang !== 'es') {
+            document.getElementById('title').textContent = L[lang].title;
+            document.getElementById('text').textContent = L[lang].text;
+            document.getElementById('btn').textContent = L[lang].btn;
             if (L[lang].dir) document.body.dir = L[lang].dir;
         }
     </script>
 </body>
+
+
 
 </html>
