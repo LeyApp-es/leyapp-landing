@@ -1148,13 +1148,18 @@
     console.log("fruitsbytes.com");
 
     // Cookie Logic
-    if (!localStorage.getItem('cookiesAccepted')) {
-      document.getElementById('cookieBanner').style.display = 'flex';
-    }
-    document.getElementById('acceptCookies').onclick = () => {
-      localStorage.setItem('cookiesAccepted', 'true');
-      document.getElementById('cookieBanner').style.display = 'none';
-    };
+    // Using a more persistent check and ensuring flex display on load
+    window.addEventListener('load', () => {
+      const banner = document.getElementById('cookieBanner');
+      if (!localStorage.getItem('cookiesAccepted')) {
+        banner.style.display = 'flex';
+      }
+
+      document.getElementById('acceptCookies').onclick = () => {
+        localStorage.setItem('cookiesAccepted', 'true');
+        banner.style.display = 'none';
+      };
+    });
 
 
 
