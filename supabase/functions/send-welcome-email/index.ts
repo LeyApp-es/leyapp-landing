@@ -160,11 +160,11 @@ const handler = async (req: Request): Promise<Response> => {
               <ul style="font-size: 16px; line-height: 1.6; color: #4b5563; margin: 0 0 30px; padding-${dir === 'rtl' ? 'right' : 'left'}: 20px;">
                 ${t.items.map((item: string) => `<li style="margin-bottom: 10px;">${item}</li>`).join('')}
               </ul>
-              <div style="text-align: center;">
-                <a href="https://leyapp.es" style="display: inline-block; background: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 100%); color: #ffffff; text-decoration: none; padding: 14px 28px; border-radius: 12px; font-weight: bold; font-size: 16px; margin-top: 10px; box-shadow: 0 4px 14px rgba(45, 212, 191, 0.3);">
-                  ${t.btn}
-                </a>
-              </div>
+        <div style="text-align: center;">
+            <a href="https://leyapp.es?lang=${lang}" style="display: inline-block; background: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 100%); color: #ffffff; text-decoration: none; padding: 14px 28px; border-radius: 12px; font-weight: bold; font-size: 16px; margin-top: 10px; box-shadow: 0 4px 14px rgba(45, 212, 191, 0.3);">
+                ${t.btn}
+            </a>
+        </div>
             </td>
           </tr>
           <!-- Footer -->
