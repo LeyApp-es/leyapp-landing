@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Página no encontrada | LeyApp</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --purple-deep: #1a0f2e;
+            --purple-rich: #2D1B4E;
+            --purple-mid: #4a3568;
+            --teal-bright: #2DD4BF;
+            --teal-glow: #5eead4;
+            --cream: #faf9f7
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font-family: 'DM Sans', system-ui, sans-serif;
+            background: var(--cream);
+            color: var(--purple-deep);
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: clamp(4rem, 15vw, 8rem);
+            font-weight: 700;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--purple-rich), var(--purple-mid));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--purple-deep);
+        }
+
+        p {
+            color: #64748b;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--purple-rich), var(--purple-mid));
+            color: #fff;
+            font-weight: 600;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all .3s;
+            box-shadow: 0 4px 20px rgba(45, 27, 78, .25)
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(45, 27, 78, .35)
+        }
+
+        .illustration {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="/">
+            <!-- Using inline SVG for logo to avoid broken image links in subdirectories -->
+            <img src="/leyapp-logo-landscape.png" alt="LeyApp" height="40" style="height:40px; width:auto;">
+        </a>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="illustration">⚖️</div>
+            <h1>404</h1>
+            <h2>Página no encontrada</h2>
+            <p>Parece que te has perdido en el papeleo. Esta página no existe.</p>
+            <a href="/" class="btn-primary">Volver al inicio</a>
+        </div>
+    </main>
+
+    <!-- Simple script to handle 404 translation redirect if needed in future -->
+    <script>
+        // Optional: Check URL params or browser lang to translate this page dynamically
+        const L = {
+            en: { title: "Page not found", text: "Looks like you got lost in current paperwork.", btn: "Back to Home" },
+            fr: { title: "Page non trouvée", text: "Il semble que vous soyez perdu dans la paperasse.", btn: "Retour à l'accueil" },
+            ar: { title: "الصفحة غير موجودة", text: "يبدو أنك ضللت الطريق في الأوراق.", btn: "العودة للرئيسية", dir: "rtl" }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || navigator.language.slice(0, 2);
+
+        if (L[lang]) {
+            document.querySelector('h2').textContent = L[lang].title;
+            document.querySelector('p').textContent = L[lang].text;
+            document.querySelector('.btn-primary').textContent = L[lang].btn;
+            if (L[lang].dir) document.body.dir = L[lang].dir;
+        }
+    </script>
+</body>
+
+</html>
