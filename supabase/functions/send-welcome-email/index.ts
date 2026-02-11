@@ -61,12 +61,12 @@ const handler = async (req: Request): Promise<Response> => {
         title: "¡Gracias por unirte!",
         badge: "✨ Registro Confirmado",
         p1: "Hemos recibido tu solicitud para unirte a la lista de espera de <strong>LeyApp</strong> en Barcelona. Nos alegra mucho que confíes en nosotros.",
-        p2: "Nuestro equipo está trabajando duro para verificar a los mejores abogados de extranjería y preparar la plataforma para ti.",
+        p2: "Nuestro equipo está trabajando duro para verificar a los mejores abogados y preparar la plataforma para ti.",
         listTitle: "Serás de los primeros en recibir:",
         items: [
           "Acceso anticipado a la plataforma",
           "Descuentos exclusivos en tu primera consulta",
-          "Guías gratuitas sobre trámites de extranjería"
+          "Guías gratuitas sobre trámites legales"
         ],
         btn: "Visitar Sitio Web",
         footer: "© 2026 LeyApp - Conectando extranjeros con abogados de confianza."

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- PRIMARY META TAGS -->
+    <title>Sobre Nosotros - LeyApp | Nuestra Misión</title>
+    <meta name="description"
+        content="LeyApp es una iniciativa legal-tech en Barcelona que simplifica el acceso a servicios legales para extranjeros. Conectamos personas con abogados de confianza.">
+    <meta name="keywords"
+        content="sobre leyapp, misión leyapp, legal tech barcelona, abogados, acceso justicia, about leyapp, legal tech spain">
+    <meta name="author" content="LeyApp">
+    <meta name="robots" content="index, follow">
+
+    <!-- CANONICAL & HREFLANG -->
+    <link rel="canonical" href="https://leyapp.es/about.html">
+    <link rel="alternate" hreflang="es" href="https://leyapp.es/about.html">
+    <link rel="alternate" hreflang="en" href="https://leyapp.es/about.html?lang=en">
+    <link rel="alternate" hreflang="fr" href="https://leyapp.es/about.html?lang=fr">
+    <link rel="alternate" hreflang="ar" href="https://leyapp.es/about.html?lang=ar">
+    <link rel="alternate" hreflang="x-default" href="https://leyapp.es/about.html">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://leyapp.es/about.html">
+    <meta property="og:title" content="Sobre Nosotros - LeyApp">
+    <meta property="og:description"
+        content="Conoce al equipo detrás de LeyApp y nuestra misión de mejorar el acceso a la justicia para extranjeros en España.">
+    <meta property="og:image" content="https://leyapp.es/og-image.jpg">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="LeyApp">
+
+    <!-- THEME & FAVICON -->
+    <meta name="theme-color" content="#2D1B4E">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- STRUCTURED DATA - AboutPage -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "LeyApp",
+      "foundingLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Barcelona",
+          "addressCountry": "ES"
+        }
+      },
+      "description": "LeyApp es una iniciativa legal-tech que conecta extranjeros con abogados verificados en España."
+    }
+  }
+  </script>
+
+    <style>
+        :root {
+            --purple-deep: #1a0f2e;
+            --purple-rich: #2D1B4E;
+            --purple-mid: #4a3568;
+            --teal-bright: #2DD4BF;
+            --teal-glow: #5eead4;
+            --cream: #faf9f7
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: 'DM Sans', system-ui, sans-serif;
+            background: var(--cream);
+            color: #1a0f2e;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        body[dir="rtl"] {
+            font-family: 'Noto Sans Arabic', 'DM Sans', sans-serif
+        }
+
+        /* Shared Styles from Index */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem
+        }
+
+        .container-sm {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem
+        }
+
+        .section {
+            padding: 5rem 0
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        /* Nav */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1rem 0;
+            transition: all .3s;
+            background: rgba(255, 255, 255, .95);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, .05)
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: inherit
+        }
+
+        .logo-image {
+            height: 60px;
+            width: auto;
+            filter: drop-shadow(1px 1px 1px rgba(41, 36, 43, 0.281));
+        }
+
+        /* Lang Selector */
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem
+        }
+
+        .lang-selector {
+            position: relative
+        }
+
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: rgba(255, 255, 255, .8);
+            border: 1px solid rgba(0, 0, 0, .08);
+            border-radius: 100px;
+            cursor: pointer;
+            font-size: .95rem;
+            font-weight: 500;
+            transition: all .2s
+        }
+
+        .lang-btn:hover {
+            background: #fff
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, .15);
+            overflow: hidden;
+            min-width: 180px;
+            display: none
+        }
+
+        [dir="rtl"] .lang-dropdown {
+            right: auto;
+            left: 0
+        }
+
+        .lang-dropdown.open {
+            display: block
+        }
+
+        .lang-option {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 18px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: left;
+            transition: background .2s
+        }
+
+        .lang-option:hover {
+            background: rgba(45, 212, 191, .08)
+        }
+
+        .lang-option.active {
+            background: rgba(45, 212, 191, .1);
+            font-weight: 600
+        }
+
+        .lang-flag {
+            width: 20px;
+            height: auto;
+            border-radius: 3px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .1)
+        }
+
+        /* Content */
+        main {
+            flex: 1;
+            padding-top: 8rem;
+        }
+
+        .hero-about {
+            text-align: center;
+            padding-bottom: 3rem;
+        }
+
+        .hero-about h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--purple-deep);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #4b5563;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .mission-box {
+            background: #fff;
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            border: 1px solid rgba(45, 212, 191, .2);
+            box-shadow: 0 10px 40px rgba(45, 27, 78, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: var(--teal-bright);
+        }
+
+        .mission-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--purple-rich);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            background: var(--purple-deep);
+            color: #fff;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 1rem
+        }
+
+        .footer-logo-icon {
+            width: 36px;
+            height: 36px;
+            object-fit: contain
+        }
+
+        .footer-tagline {
+            color: rgba(255, 255, 255, .6);
+            font-size: .95rem;
+            margin-bottom: .5rem
+        }
+
+        .footer-copyright {
+            color: rgba(255, 255, 255, .4);
+            font-size: .85rem
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-inner">
+                    <a href="/" class="logo" aria-label="LeyApp - Inicio">
+                        <img src="leyapp-logo-landscape.png" alt="LeyApp" class="logo-image" width="192" height="60">
+                    </a>
+                    <div class="nav-right">
+                        <div class="lang-selector">
+                            <button class="lang-btn" id="langBtn" aria-label="Seleccionar idioma" aria-expanded="false"
+                                aria-haspopup="true">
+                                <span class="lang-flag-wrapper" id="currentFlag" aria-hidden="true"><img
+                                        src="flags/es.svg" alt="" class="lang-flag"></span>
+                                <span id="currentLang">Español</span>
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div class="lang-dropdown" id="langDropdown" role="menu">
+                                <button class="lang-option active" data-lang="es" role="menuitem"><img
+                                        src="flags/es.svg" alt="Español" class="lang-flag"><span>Español</span></button>
+                                <button class="lang-option" data-lang="en" role="menuitem"><img src="flags/gb.svg"
+                                        alt="English" class="lang-flag"><span>English</span></button>
+                                <button class="lang-option" data-lang="fr" role="menuitem"><img src="flags/fr.svg"
+                                        alt="Français" class="lang-flag"><span>Français</span></button>
+                                <button class="lang-option" data-lang="ar" role="menuitem"><img src="flags/sa.svg"
+                                        alt="العربية" class="lang-flag"><span>العربية</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container-sm">
+                <div class="hero-about">
+                    <h1 id="aboutTitle">Sobre Nosotros</h1>
+                </div>
+
+                <div class="about-content">
+                    <p id="aboutP1">LeyApp es una iniciativa legal-tech con sede en Barcelona que tiene como objetivo
+                        simplificar el acceso a los servicios legales en España.</p>
+                    <p id="aboutP2">Estamos construyendo una plataforma digital diseñada para conectar a personas del
+                        extranjero con abogados cualificados, ayudándoles a navegar procesos administrativos y legales
+                        con claridad, confianza y seguridad.</p>
+                    <p id="aboutP3">LeyApp se encuentra actualmente en fase de lanzamiento y se está desarrollando en
+                        colaboración con profesionales del derecho y socios institucionales.</p>
+
+                    <div class="mission-box">
+                        <div class="mission-title">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                            </svg>
+                            <span id="missionTitle">Misión</span>
+                        </div>
+                        <p id="missionText">Nuestra misión es mejorar el acceso a la justicia eliminando las barreras
+                            lingüísticas, culturales e informativas en los procesos legales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="leyapp-logo-portrait.png" alt="LeyApp" class="footer-logo-icon"
+                    style="height: 102px;width:auto;border-radius: 12px;box-shadow: 1px 1px 4px #161616;">
+            </div>
+            <p class="footer-tagline" id="footerTagline">Conectando extranjeros con abogados de confianza</p>
+
+            <a href="mailto:info@leyapp.es"
+                style="display: inline-block; color: rgba(255, 255, 255, 0.8); text-decoration: none; margin-bottom: 1rem; font-weight: 500;">info@leyapp.es</a>
+
+            <!-- Social Media -->
+            <div class="social-links" style="margin-bottom: 1.5rem;">
+                <a href="https://www.linkedin.com/company/leyapplication/" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; color: #fff; transition: all 0.2s;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Footer Language Links -->
+            <div class="footer-languages" style="margin-bottom: 1.5rem; font-size: 0.9rem;">
+                <a href="?lang=es" onclick="event.preventDefault(); update('es');"
+                    style="color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 8px;">Español</a>
+                <span style="color: rgba(255,255,255,0.3);">|</span>
+                <a href="?lang=en" onclick="event.preventDefault(); update('en');"
+                    style="color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 8px;">English</a>
+                <span style="color: rgba(255,255,255,0.3);">|</span>
+                <a href="?lang=fr" onclick="event.preventDefault(); update('fr');"
+                    style="color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 8px;">Français</a>
+                <span style="color: rgba(255,255,255,0.3);">|</span>
+                <a href="?lang=ar" onclick="event.preventDefault(); update('ar');"
+                    style="color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 8px;">العربية</a>
+            </div>
+
+            <div class="footer-legal" style="font-size: 0.8rem; margin-top: 1rem;">
+                <a href="/" style="color: rgba(255,255,255,0.4); text-decoration: none; margin: 0 8px;">Inicio</a>
+                <span style="color: rgba(255,255,255,0.4);">|</span>
+                <a href="/legal.html" style="color: rgba(255,255,255,0.4); text-decoration: none; margin: 0 8px;">Aviso
+                    Legal y Privacidad</a>
+            </div>
+
+            <p class="footer-copyright" id="footerCopyright">© 2026 LeyApp. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Translation Data
+        const T = {
+            es: {
+                dir: "ltr",
+                title: "Sobre Nosotros",
+                p1: "LeyApp es una iniciativa legal-tech con sede en Barcelona que tiene como objetivo simplificar el acceso a los servicios legales en España.",
+                p2: "Estamos construyendo una plataforma digital diseñada para conectar a personas del extranjero con abogados cualificados, ayudándoles a navegar procesos administrativos y legales con claridad, confianza y seguridad.",
+                p3: "LeyApp se encuentra actualmente en fase de lanzamiento y se está desarrollando en colaboración con profesionales del derecho y socios institucionales.",
+                missionTitle: "Misión",
+                missionText: "Nuestra misión es mejorar el acceso a la justicia eliminando las barreras lingüísticas, culturales e informativas en los procesos legales.",
+                footerTagline: "Conectando extranjeros con abogados de confianza", // Kept purely for structure
+                footerCopyright: "© 2026 LeyApp. Todos los derechos reservados."
+            },
+            en: {
+                dir: "ltr",
+                title: "About Us",
+                p1: "LeyApp is a legal-tech initiative based in Barcelona that aims to simplify access to legal services in Spain.",
+                p2: "We are building a digital platform designed to connect people from abroad with qualified lawyers, helping them navigate administrative and legal processes with clarity, trust, and confidence.",
+                p3: "LeyApp is currently in its launch phase and is being developed in collaboration with legal professionals and institutional partners.",
+                missionTitle: "Mission",
+                missionText: "Our mission is to improve access to justice by removing linguistic, cultural, and informational barriers in legal processes.",
+                footerTagline: "Connecting foreigners with trusted lawyers",
+                footerCopyright: "© 2026 LeyApp. All rights reserved."
+            },
+            fr: {
+                dir: "ltr",
+                title: "À Propos",
+                p1: "LeyApp est une initiative legal-tech basée à Barcelone dont l'objectif est de simplifier l'accès aux services juridiques en Espagne.",
+                p2: "Nous construisons une plateforme numérique conçue pour mettre en relation les personnes de l'étranger avec des avocats qualifiés, les aidant à naviguer dans les processus administratifs et juridiques avec clarté et confiance.",
+                p3: "LeyApp est actuellement en phase de lancement et est développée en collaboration avec des professionnels du droit et des partenaires institutionnels.",
+                missionTitle: "Mission",
+                missionText: "Notre mission est d'améliorer l'accès à la justice en supprimant les barrières linguistiques, culturelles et informationnelles dans les processus juridiques.",
+                footerTagline: "Connecter les étrangers avec des avocats de confiance",
+                footerCopyright: "© 2026 LeyApp. Tous droits réservés."
+            },
+            ar: {
+                dir: "rtl",
+                title: "من نحن",
+                p1: "LeyApp هي مبادرة للتكنولوجيا القانونية مقرها برشلونة وتهدف إلى تبسيط الوصول إلى الخدمات القانونية في إسبانيا.",
+                p2: "نحن نبني منصة رقمية مصممة لربط الأشخاص من الخارج بمحامين مؤهلين، ومساعدتهم على اجتياز الإجراءات الإدارية والقانونية بوضوح وثقة.",
+                p3: "LeyApp حاليًا في مرحلة الإطلاق ويتم تطويرها بالتعاون مع متخصصين قانونيين وشركاء مؤسسيين.",
+                missionTitle: "مهمتنا",
+                missionText: "مهمتنا هي تحسين الوصول إلى العدالة من خلال إزالة الحواجز اللغوية والثقافية والمعلوماتية في العمليات القانونية.",
+                footerTagline: "ربط الأجانب بمحامين موثوقين",
+                footerCopyright: "© 2026 LeyApp. جميع الحقوق محفوظة."
+            }
+        };
+
+        const L = { es: { name: 'Español', flag: '<img src="flags/es.svg" alt="Español" class="lang-flag">' }, en: { name: 'English', flag: '<img src="flags/gb.svg" alt="English" class="lang-flag">' }, fr: { name: 'Français', flag: '<img src="flags/fr.svg" alt="Français" class="lang-flag">' }, ar: { name: 'العربية', flag: '<img src="flags/sa.svg" alt="العربية" class="lang-flag">' } };
+
+        function detectLang() { const p = new URLSearchParams(location.search).get('lang'); if (p && T[p]) return p; return 'es' }
+        let lang = detectLang();
+
+        function update(l) {
+            const t = T[l];
+            document.documentElement.lang = l;
+            document.documentElement.dir = t.dir;
+            document.body.dir = t.dir;
+
+            // Update URL without refresh
+            const u = new URL(location);
+            l === 'es' ? u.searchParams.delete('lang') : u.searchParams.set('lang', l);
+            try { history.replaceState({}, '', u) } catch (e) { };
+
+            // Update Content
+            document.getElementById('aboutTitle').textContent = t.title;
+            document.getElementById('aboutP1').textContent = t.p1;
+            document.getElementById('aboutP2').textContent = t.p2;
+            document.getElementById('aboutP3').textContent = t.p3;
+            document.getElementById('missionTitle').textContent = t.missionTitle;
+            document.getElementById('missionText').textContent = t.missionText;
+            document.getElementById('footerTagline').textContent = t.footerTagline;
+            document.getElementById('footerCopyright').textContent = t.footerCopyright;
+
+            // Update Lang Switcher
+            document.getElementById('currentFlag').innerHTML = L[l].flag;
+            document.getElementById('currentLang').textContent = L[l].name;
+            document.querySelectorAll('.lang-option').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            update(lang);
+
+            // Lang Dropdown logic
+            const btn = document.getElementById('langBtn'), dd = document.getElementById('langDropdown');
+            btn.onclick = () => { dd.classList.toggle('open'); btn.setAttribute('aria-expanded', dd.classList.contains('open')) };
+            document.querySelectorAll('.lang-option').forEach(o => o.onclick = () => { lang = o.dataset.lang; update(lang); dd.classList.remove('open'); btn.setAttribute('aria-expanded', 'false') });
+            document.onclick = e => { if (!e.target.closest('.lang-selector')) { dd.classList.remove('open'); btn.setAttribute('aria-expanded', 'false') } };
+        });
+    </script>
+</body>
+
+</html>
