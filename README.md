@@ -1,12 +1,24 @@
 # LeyApp Landing Page
 
-## How to Run Locally
+🚀 **LeyApp** connects foreigners in Spain with verified immigration lawyers who speak their language. 
 
-Since this is a static website (HTML/CSS/JS), you can easily run it locally using `npx` to serve the files.
+This repository contains the source code for the static landing page of LeyApp.
+
+## 🔗 Live Demo
+
+Visit the live site: [https://leyapp.es](https://leyapp.es)
+
+## 🛠️ Tech Stack
+
+- **Frontend**: HTML5, Vanilla CSS, JavaScript (No frameworks)
+- **Backend (Edge)**: Supabase Edge Functions (Deno) for waitlist email automation
+- **Hosting**: Netlify / Vercel (Static serving)
+
+## 🚀 How to Run Locally
+
+Since this is a static website, you can easily run it locally using `npx`.
 
 ### Option 1: Using `serve` (Recommended)
-
-Run the following command in this directory:
 
 ```bash
 npx serve .
@@ -14,10 +26,18 @@ npx serve .
 
 ### Option 2: Using `http-server`
 
-Alternatively:
-
 ```bash
 npx http-server .
 ```
 
-Once the server starts, open the URL displayed in your terminal (typically `http://localhost:3000` or `http://localhost:8080`) in your browser to view the site.
+Open `http://localhost:3000` (or the port shown) in your browser.
+
+## 🔒 Security Note
+
+This is a public repository. **Do not commit** `.env` files or real API keys.
+Environment variables (like `RESEND_API_KEY`) are managed in the Supabase Dashboard.
+
+## 📄 License
+
+Copyright (c) 2026 Ley Application S.L. All rights reserved.
+See [LICENSE](LICENSE) for details.

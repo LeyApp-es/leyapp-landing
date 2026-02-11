@@ -189,7 +189,7 @@ const handler = async (req: Request): Promise<Response> => {
         "Authorization": `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "LeyApp <hello@leyapp.es>", // Make sure to verify domain in Resend
+        from: "LeyApp <info@leyapp.es>", // Make sure to verify domain in Resend
         to: [record.email],
         subject: subject,
         html: htmlContent,
@@ -205,7 +205,7 @@ const handler = async (req: Request): Promise<Response> => {
     });
   } catch (error) {
     console.error("Error processing webhook:", error);
-    return new Response(JSON.stringify({ error: error.message }), {
+    return new Response(JSON.stringify({ error: (error as Error).message }), {
       status: 500,
       headers: { "Content-Type": "application/json" },
     });
