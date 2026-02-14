@@ -6,28 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- PRIMARY META TAGS -->
-    <title>Sobre LeyApp | Innovación Legal y Apoyo para Extranjeros en España</title>
+    <title>¿Para quién es LeyApp? | Abogados para Extranjeros y Expatriados en España</title>
     <meta name="description"
-        content="Nuestra misión es democratizar el acceso a la justicia para extranjeros en España. Conoce cómo LeyApp conecta expatriados con abogados multilingües verificados.">
+        content="Servicios legales adaptados para residentes extranjeros, profesionales internacionales (Expats), ONGs y despachos de abogados. Conecta con expertos que hablan tu idioma.">
     <meta name="keywords"
-        content="legaltech españa, leyapp misión, abogados extranjeros barcelona, acceso justicia expatriados, tecnología legal para inmigrantes, legal assistance spain">
+        content="abogados para extranjeros, legal help for expats spain, english speaking lawyers barcelona, servicios para ongs españa, plataforma gestión abogados, digital nomad legal support">
     <meta name="author" content="LeyApp">
     <meta name="robots" content="index, follow">
 
     <!-- CANONICAL & HREFLANG -->
-    <link rel="canonical" href="https://leyapp.es/about.html">
-    <link rel="alternate" hreflang="es" href="https://leyapp.es/about.html">
-    <link rel="alternate" hreflang="en" href="https://leyapp.es/about.html?lang=en">
-    <link rel="alternate" hreflang="fr" href="https://leyapp.es/about.html?lang=fr">
-    <link rel="alternate" hreflang="ar" href="https://leyapp.es/about.html?lang=ar">
-    <link rel="alternate" hreflang="x-default" href="https://leyapp.es/about.html">
+    <link rel="canonical" href="https://leyapp.es/who.html">
+    <link rel="alternate" hreflang="es" href="https://leyapp.es/who.html">
+    <link rel="alternate" hreflang="en" href="https://leyapp.es/who.html?lang=en">
+    <link rel="alternate" hreflang="fr" href="https://leyapp.es/who.html?lang=fr">
+    <link rel="alternate" hreflang="ar" href="https://leyapp.es/who.html?lang=ar">
+    <link rel="alternate" hreflang="x-default" href="https://leyapp.es/who.html">
 
     <!-- OPEN GRAPH -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://leyapp.es/about.html">
-    <meta property="og:title" content="Sobre Nosotros - LeyApp">
+    <meta property="og:url" content="https://leyapp.es/who.html">
+    <meta property="og:title" content="Para quién es LeyApp - Nuestra Comunidad">
     <meta property="og:description"
-        content="Conoce al equipo detrás de LeyApp y nuestra misión de mejorar el acceso a la justicia para extranjeros en España.">
+        content="Conectamos a extranjeros con profesionales del derecho. Una solución integral para residentes, expatriados, abogados e instituciones.">
     <meta property="og:image" content="https://leyapp.es/og-image.jpg">
     <meta property="og:locale" content="es_ES">
     <meta property="og:site_name" content="LeyApp">
@@ -43,27 +43,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-
-    <!-- STRUCTURED DATA - AboutPage -->
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "LeyApp",
-      "foundingLocation": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Barcelona",
-          "addressCountry": "ES"
-        }
-      },
-      "description": "LeyApp es una iniciativa legal-tech que conecta extranjeros con abogados verificados en España."
-    }
-  }
-  </script>
 
     <style>
         :root {
@@ -99,7 +78,6 @@
             font-family: 'Noto Sans Arabic', 'DM Sans', sans-serif
         }
 
-        /* Shared Styles from Index */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -107,7 +85,7 @@
         }
 
         .container-sm {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 0 1.5rem
         }
@@ -154,7 +132,6 @@
             filter: drop-shadow(1px 1px 1px rgba(41, 36, 43, 0.281));
         }
 
-        /* Lang Selector */
         .nav-right {
             display: flex;
             align-items: center;
@@ -219,6 +196,10 @@
             transition: background .2s
         }
 
+        [dir="rtl"] .lang-option {
+            text-align: right
+        }
+
         .lang-option:hover {
             background: rgba(45, 212, 191, .08)
         }
@@ -241,59 +222,85 @@
             padding-top: 8rem;
         }
 
-        .hero-about {
-            text-align: center;
-            padding-bottom: 3rem;
-        }
-
-        .hero-about h1 {
-            font-size: clamp(2rem, 4vw, 3rem);
+        .hero-title {
+            font-size: clamp(2.25rem, 5vw, 3.5rem);
             font-weight: 700;
             color: var(--purple-deep);
-            margin-bottom: 1.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
         }
 
-        .about-content {
-            font-size: 1.15rem;
-            line-height: 1.8;
-            color: #4b5563;
-            max-width: 800px;
-            margin: 0 auto;
+        .who-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
-        .about-content p {
-            margin-bottom: 1.5rem;
+        @media (max-width: 500px) {
+            .who-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
-        .mission-box {
+        .who-card {
             background: #fff;
-            border-radius: 20px;
+            border-radius: 24px;
             padding: 2.5rem;
-            margin-top: 3rem;
-            border: 1px solid rgba(45, 212, 191, .2);
-            box-shadow: 0 10px 40px rgba(45, 27, 78, 0.05);
+            border: 1px solid rgba(0, 0, 0, .05);
+            box-shadow: 0 10px 40px rgba(45, 27, 78, 0.03);
+            transition: all .3s ease;
+            display: flex;
+            flex-direction: column;
             position: relative;
             overflow: hidden;
         }
 
-        .mission-box::before {
+        .who-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(45, 27, 78, 0.08);
+            border-color: rgba(45, 212, 191, .3);
+        }
+
+        .who-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 6px;
-            height: 100%;
-            background: var(--teal-bright);
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--teal-bright), var(--purple-mid));
+            opacity: 0;
+            transition: opacity .3s ease;
         }
 
-        .mission-title {
+        .who-card:hover::before {
+            opacity: 1;
+        }
+
+        .who-card-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(45, 212, 191, .1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--teal-bright);
+        }
+
+        .who-card h2 {
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--purple-rich);
             margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        }
+
+        .who-card p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #4b5563;
         }
 
         /* Footer */
@@ -372,33 +379,75 @@
 
     <main>
         <section class="section">
-            <div class="container-sm">
-                <div class="hero-about">
-                    <h1 id="aboutTitle">Sobre Nosotros</h1>
-                </div>
+            <div class="container">
+                <h1 id="whoTitle" class="hero-title">¿Para quién es LeyApp?</h1>
 
-                <div class="about-content">
-                    <p id="aboutP1">LeyApp es una iniciativa legal-tech con sede en Barcelona que tiene como objetivo
-                        simplificar el acceso a los servicios legales en España.</p>
-                    <p id="aboutP2">Estamos construyendo una plataforma digital diseñada para conectar a personas del
-                        extranjero con abogados cualificados, ayudándoles a navegar procesos administrativos y legales
-                        con claridad, confianza y seguridad.</p>
-                    <p id="aboutP3">LeyApp se encuentra actualmente en fase de lanzamiento y se está desarrollando en
-                        colaboración con profesionales del derecho y socios institucionales.</p>
-
-                    <div class="mission-box">
-                        <div class="mission-title">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                <div class="who-grid">
+                    <!-- Foreign Residents -->
+                    <article class="who-card">
+                        <div class="who-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
                             </svg>
-                            <span id="missionTitle">Misión</span>
                         </div>
-                        <p id="missionText">Nuestra misión es mejorar el acceso a la justicia eliminando las barreras
-                            lingüísticas, culturales e informativas en los procesos legales.</p>
-                    </div>
+                        <h2 id="card1Title">Para Residentes Extranjeros en España</h2>
+                        <p id="card1Text">Personas que necesitan orientación legal en áreas como inmigración, laboral,
+                            fiscal, familia, vivienda o procedimientos administrativos, y que buscan claridad,
+                            estructura y acceso a profesionales de confianza.</p>
+                    </article>
+
+                    <!-- International Professionals -->
+                    <article class="who-card">
+                        <div class="who-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <h2 id="card2Title">Para Profesionales Internacionales y Expats</h2>
+                        <p id="card2Text">Trabajadores, emprendedores, estudiantes y familias que navegan por los
+                            sistemas legales españoles y valoran la eficiencia, la transparencia y el acceso digital a
+                            los servicios legales.</p>
+                    </article>
+
+                    <!-- Lawyers -->
+                    <article class="who-card">
+                        <div class="who-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h2 id="card3Title">Para Despachos de Abogados y Abogados Independientes</h2>
+                        <p id="card3Text">Profesionales del derecho que desean conectar con clientes internacionales a
+                            través de una plataforma estructurada, segura y tecnológica.</p>
+                    </article>
+
+                    <!-- NGOs -->
+                    <article class="who-card">
+                        <div class="who-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h2 id="card4Title">Para ONGs, Asociaciones e Instituciones</h2>
+                        <p id="card4Text">Organizaciones que apoyan a las comunidades extranjeras y buscan una
+                            infraestructura digital fiable para complementar sus servicios y facilitar el acceso
+                            estructurado a profesionales jurídicos cualificados.</p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -444,11 +493,10 @@
             </div>
 
             <div class="footer-legal" style="font-size: 0.8rem; margin-top: 1rem;">
-                <a href="/who.html" id="whoLink"
-                    style="color: rgba(255,255,255,0.4); text-decoration: none; margin: 0 8px;">¿Para quién es
-                    LeyApp?</a>
-                <span style="color: rgba(255,255,255,0.4);">|</span>
                 <a href="/" style="color: rgba(255,255,255,0.4); text-decoration: none; margin: 0 8px;">Inicio</a>
+                <span style="color: rgba(255,255,255,0.4);">|</span>
+                <a href="/about.html" id="aboutLink"
+                    style="color: rgba(255,255,255,0.4); text-decoration: none; margin: 0 8px;">Sobre Nosotros</a>
                 <span style="color: rgba(255,255,255,0.4);">|</span>
                 <a href="/legal.html" id="legalLink"
                     style="color: rgba(255,255,255,0.4); text-decoration: none; margin: 0 8px;">Aviso Legal y
@@ -464,57 +512,65 @@
         const T = {
             es: {
                 dir: "ltr",
-                title: "Sobre Nosotros",
-                p1: "LeyApp es una iniciativa legal-tech con sede en Barcelona que tiene como objetivo simplificar el acceso a los servicios legales en España.",
-                p2: "Estamos construyendo una plataforma digital diseñada para conectar a personas del extranjero con abogados cualificados, ayudándoles a navegar procesos administrativos y legales con claridad, confianza y seguridad.",
-                p3: "LeyApp se encuentra actualmente en fase de lanzamiento y se está desarrollando en colaboración con profesionales del derecho y socios institucionales.",
-                missionTitle: "Misión",
-                missionText: "Nuestra misión es mejorar el acceso a la justicia eliminando las barreras lingüísticas, culturales e informativas en los procesos legales.",
-                footerTagline: "Conectando extranjeros con abogados de confianza", // Kept purely for structure
+                title: "¿Para quién es LeyApp?",
+                card1Title: "Para Residentes Extranjeros en España",
+                card1Text: "Personas que necesitan orientación legal en áreas como inmigración, laboral, fiscal, familia, vivienda o procedimientos administrativos, y que buscan claridad, estructura y acceso a profesionales de confianza.",
+                card2Title: "Para Profesionales Internacionales y Expats",
+                card2Text: "Trabajadores, emprendedores, estudiantes y familias que navegan por los sistemas legales españoles y valoran la eficiencia, la transparencia y el acceso digital a los servicios legales.",
+                card3Title: "Para Despachos de Abogados y Abogados Independientes",
+                card3Text: "Profesionales del derecho que desean conectar con clientes internacionales a través de una plataforma estructurada, segura y tecnológica.",
+                card4Title: "Para ONGs, Asociaciones e Instituciones",
+                card4Text: "Organizaciones que apoyan a las comunidades extranjeras y buscan una infraestructura digital fiable para complementar sus servicios y facilitar el acceso estructurado a profesionales jurídicos cualificados.",
+                footerTagline: "Conectando extranjeros con abogados de confianza",
                 footerCopyright: "© 2026 LeyApp. Todos los derechos reservados.",
-                whoLink: "¿Para quién es LeyApp?",
                 aboutLink: "Sobre Nosotros",
                 legalLink: "Aviso Legal y Privacidad"
             },
             en: {
                 dir: "ltr",
-                title: "About Us",
-                p1: "LeyApp is a legal-tech initiative based in Barcelona that aims to simplify access to legal services in Spain.",
-                p2: "We are building a digital platform designed to connect people from abroad with qualified lawyers, helping them navigate administrative and legal processes with clarity, trust, and confidence.",
-                p3: "LeyApp is currently in its launch phase and is being developed in collaboration with legal professionals and institutional partners.",
-                missionTitle: "Mission",
-                missionText: "Our mission is to improve access to justice by removing linguistic, cultural, and informational barriers in legal processes.",
+                title: "Who is LeyApp for?",
+                card1Title: "For Foreign Residents in Spain",
+                card1Text: "Individuals who need legal guidance in areas such as immigration, labor, tax, family, housing, or administrative procedures — and who seek clarity, structure, and access to trusted professionals.",
+                card2Title: "For International Professionals & Expats",
+                card2Text: "Workers, entrepreneurs, students, and families navigating Spanish legal systems who value efficiency, transparency, and digital access to legal services.",
+                card3Title: "For Law Firms & Independent Lawyers",
+                card3Text: "Legal professionals who want to connect with international clients through a structured, secure, and technology-driven platform.",
+                card4Title: "For NGOs, Associations & Institutions",
+                card4Text: "Organizations supporting foreign communities that seek a reliable digital infrastructure to complement their services and facilitate structured access to qualified legal professionals.",
                 footerTagline: "Connecting foreigners with trusted lawyers",
                 footerCopyright: "© 2026 LeyApp. All rights reserved.",
-                whoLink: "Who is LeyApp for?",
                 aboutLink: "About Us",
                 legalLink: "Legal Notice & Privacy"
             },
             fr: {
                 dir: "ltr",
-                title: "À Propos",
-                p1: "LeyApp est une initiative legal-tech basée à Barcelone dont l'objectif est de simplifier l'accès aux services juridiques en Espagne.",
-                p2: "Nous construisons une plateforme numérique conçue pour mettre en relation les personnes de l'étranger avec des avocats qualifiés, les aidant à naviguer dans les processus administratifs et juridiques avec clarté et confiance.",
-                p3: "LeyApp est actuellement en phase de lancement et est développée en collaboration avec des professionnels du droit et des partenaires institutionnels.",
-                missionTitle: "Mission",
-                missionText: "Notre mission est d'améliorer l'accès à la justice en supprimant les barrières linguistiques, culturelles et informationnelles dans les processus juridiques.",
+                title: "Pour qui est LeyApp ?",
+                card1Title: "Pour les résidents étrangers en Espagne",
+                card1Text: "Personnes ayant besoin de conseils juridiques dans des domaines tels que l'immigration, le travail, la fiscalité, la famille, le logement ou les procédures administratives — et qui recherchent clarté, structure et accès à des professionnels de confiance.",
+                card2Title: "Pour les professionnels internationaux et expatriés",
+                card2Text: "Travailleurs, entrepreneurs, étudiants et familles naviguant dans les systèmes juridiques espagnols qui privilégient l'efficacité, la transparence et l'accès numérique aux services juridiques.",
+                card3Title: "Pour les cabinets d'avocats et les avocats indépendants",
+                card3Text: "Professionnels du droit souhaitant entrer en contact avec des clients internationaux via une plateforme structurée, sécurisée et axée sur la technologie.",
+                card4Title: "Pour les ONG, associations et institutions",
+                card4Text: "Organisations soutenant les communautés étrangères qui recherchent une infrastructure numérique fiable pour compléter leurs services et faciliter l'accès structuré à des professionnels du droit qualifiés.",
                 footerTagline: "Connecter les étrangers avec des avocats de confiance",
                 footerCopyright: "© 2026 LeyApp. Tous droits réservés.",
-                whoLink: "Pour qui est LeyApp ?",
                 aboutLink: "À Propos",
                 legalLink: "Mentions Légales"
             },
             ar: {
                 dir: "rtl",
-                title: "من نحن",
-                p1: "LeyApp هي مبادرة للتكنولوجيا القانونية مقرها برشلونة وتهدف إلى تبسيط الوصول إلى الخدمات القانونية في إسبانيا.",
-                p2: "نحن نبني منصة رقمية مصممة لربط الأشخاص من الخارج بمحامين مؤهلين، ومساعدتهم على اجتياز الإجراءات الإدارية والقانونية بوضوح وثقة.",
-                p3: "LeyApp حاليًا في مرحلة الإطلاق ويتم تطويرها بالتعاون مع متخصصين قانونيين وشركاء مؤسسيين.",
-                missionTitle: "مهمتنا",
-                missionText: "مهمتنا هي تحسين الوصول إلى العدالة من خلال إزالة الحواجز اللغوية والثقافية والمعلوماتية في العمليات القانونية.",
+                title: "لمن LeyApp؟",
+                card1Title: "للمقيمين الأجانب في إسبانيا",
+                card1Text: "الأفراد الذين يحتاجون إلى توجيه قانوني في مجالات مثل الهجرة، أو العمل، أو الضرائب، أو الأسرة، أو الإسكان، أو الإجراءات الإدارية - والذين يبحثون عن الوضوح والهيكلية والوصول إلى مهنيين موثوقين.",
+                card2Title: "للمهنيين الدوليين والمغتربين",
+                card2Text: "العمال ورجال الأعمال والطلاب والعائلات الذين يتعاملون مع الأنظمة القانونية الإسبانية والذين يقدرون الكفاءة والشفافية والوصول الرقمي إلى الخدمات القانونية.",
+                card3Title: "لمكاتب المحاماة والمحامين المستقلين",
+                card3Text: "المهنيون القانونيون الذين يرغبون في التواصل مع العملاء الدوليين من خلال منصة منظمة وآمنة ومدفوعة بالتكنولوجيا.",
+                card4Title: "للمنظمات غير الحكومية والجمعيات والمؤسسات",
+                card4Text: "المنظمات التي تدعم المجتمعات الأجنبية والتي تبحث عن بنية تحتية رقمية موثوقة لتكملة خدماتها وتسهيل الوصول المنظم إلى المهنيين القانونيين المؤهلين.",
                 footerTagline: "ربط الأجانب بمحامين موثوقين",
                 footerCopyright: "© 2026 LeyApp. جميع الحقوق محفوظة.",
-                whoLink: "لمن LeyApp؟",
                 aboutLink: "من نحن",
                 legalLink: "الشروط والخصوصية"
             }
@@ -536,29 +592,33 @@
             const t = T[l];
 
             try { localStorage.setItem('userLang', l); } catch (e) { }
+
             document.documentElement.lang = l;
             document.documentElement.dir = t.dir;
             document.body.dir = t.dir;
 
-            // Update URL without refresh
+            // Update URL
             const u = new URL(location);
             l === 'es' ? u.searchParams.delete('lang') : u.searchParams.set('lang', l);
             try { history.replaceState({}, '', u) } catch (e) { };
 
             // Update Content
-            document.getElementById('aboutTitle').textContent = t.title;
-            document.getElementById('aboutP1').textContent = t.p1;
-            document.getElementById('aboutP2').textContent = t.p2;
-            document.getElementById('aboutP3').textContent = t.p3;
-            document.getElementById('missionTitle').textContent = t.missionTitle;
-            document.getElementById('missionText').textContent = t.missionText;
+            document.getElementById('whoTitle').textContent = t.title;
+            document.getElementById('card1Title').textContent = t.card1Title;
+            document.getElementById('card1Text').textContent = t.card1Text;
+            document.getElementById('card2Title').textContent = t.card2Title;
+            document.getElementById('card2Text').textContent = t.card2Text;
+            document.getElementById('card3Title').textContent = t.card3Title;
+            document.getElementById('card3Text').textContent = t.card3Text;
+            document.getElementById('card4Title').textContent = t.card4Title;
+            document.getElementById('card4Text').textContent = t.card4Text;
+
             document.getElementById('footerTagline').textContent = t.footerTagline;
             document.getElementById('footerCopyright').textContent = t.footerCopyright;
-            if (document.getElementById('whoLink')) document.getElementById('whoLink').textContent = t.whoLink;
-            if (document.getElementById('aboutLink')) document.getElementById('aboutLink').textContent = t.aboutLink;
-            if (document.getElementById('legalLink')) document.getElementById('legalLink').textContent = t.legalLink;
+            document.getElementById('aboutLink').textContent = t.aboutLink;
+            document.getElementById('legalLink').textContent = t.legalLink;
 
-            // Update Lang Switcher
+            // Update Switcher
             document.getElementById('currentFlag').innerHTML = L[l].flag;
             document.getElementById('currentLang').textContent = L[l].name;
             document.querySelectorAll('.lang-option').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
@@ -566,8 +626,6 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             update(lang);
-
-            // Lang Dropdown logic
             const btn = document.getElementById('langBtn'), dd = document.getElementById('langDropdown');
             btn.onclick = () => { dd.classList.toggle('open'); btn.setAttribute('aria-expanded', dd.classList.contains('open')) };
             document.querySelectorAll('.lang-option').forEach(o => o.onclick = () => { lang = o.dataset.lang; update(lang); dd.classList.remove('open'); btn.setAttribute('aria-expanded', 'false') });

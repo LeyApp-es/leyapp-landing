@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- PRIMARY META TAGS -->
-  <title>LeyApp - Encuentra un abogado en tu idioma en España | Abogados Verificados</title>
+  <title>LeyApp - Encuentra Abogados en tu Idioma en España | English Speaking Lawyers Spain</title>
   <meta name="description"
-    content="España regularizará 500.000 extranjeros en 2026. Conecta con abogados verificados para preparar tu solicitud. Consultas online en tu idioma.">
+    content="Plataforma líder para encontrar abogados verificados en tu idioma en España. Especialistas en Extranjería, Digital Nomad Visa, Golden Visa y Relocation. ¡Consultas fáciles para extranjeros!">
   <meta name="keywords"
-    content="regularización extranjeros españa 2026, nuevo reglamento extranjería, papeles españa, arraigo, abogado, visa españa, regularization spain 2026, immigration lawyer spain">
+    content="abogados extranjeros españa, english speaking lawyers spain, specialists in spanish immigration law, digital nomad visa spain, golden visa spain lawyers, abogados extranjeria barcelona, relocation spain, arraigo social 2026, regularización extranjeros españa">
   <meta name="author" content="LeyApp">
   <meta name="robots" content="index, follow">
 
@@ -86,11 +86,21 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "LeyApp - Directorio de Abogados",
-    "serviceType": "Legal Directory",
+    "name": "LeyApp - Directorio de Abogados Especializados",
+    "serviceType": "Legal Services for Foreigners",
     "provider": { "@type": "Organization", "name": "LeyApp" },
     "areaServed": { "@type": "Country", "name": "Spain" },
-    "description": "Encuentra y reserva consultas con abogados verificados en España"
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios Legales",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital Nomad Visa Spain" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Golden Visa Spain" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Spanish Citizenship & Residency" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Real Estate Law for Expats" } }
+      ]
+    },
+    "description": "Encuentra y reserva consultas con abogados verificados que hablan tu idioma. Expertos en inmigración, fiscalidad y derecho inmobiliario en España."
   }
   </script>
 
@@ -130,6 +140,22 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Visados de trabajo, Golden Visa, visa nómada digital, residencia, ciudadanía, reagrupación familiar y asilo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to find an English speaking lawyer in Barcelona?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LeyApp allows you to filter verified lawyers by language. Simply select 'English' in our search tool to find professional lawyers in Barcelona who can assist you in your native language."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can LeyApp help me with the Spanish Digital Nomad Visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we have a network of specialized lawyers who are experts in the Digital Nomad Visa and other relocation procedures in Spain."
         }
       }
     ]
@@ -845,6 +871,168 @@
         text-align: center
       }
     }
+
+    /* Split Section Styles */
+    .split-nav-section {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      position: relative;
+      z-index: 5;
+      /* Ensure it sits correctly in stacking order */
+      background: var(--cream);
+    }
+
+    @media (min-width: 768px) {
+      .split-nav-section {
+        flex-direction: row;
+        align-items: stretch;
+        /* Match height */
+      }
+    }
+
+    .split-card {
+      flex: 1;
+      position: relative;
+      padding: 3rem 2rem 1rem 2rem;
+      min-height: 250px;
+      /* Not too tall */
+      display: flex;
+      flex-direction: column;
+      overflow: visible;
+      /* CRITICAL for overflowing image */
+    }
+
+    /* Primary Section (Left) - Purple Gradient */
+    .split-card.primary {
+      background: linear-gradient(135deg, var(--purple-rich) 0%, var(--purple-mid) 100%);
+      color: white;
+    }
+
+    /* Secondary Section (Right) - Teal Gradient */
+    .split-card.secondary {
+      /* Using teal colors but ensuring text contrast */
+      background: linear-gradient(135deg, var(--teal-bright) 0%, var(--teal-glow) 100%);
+      color: var(--purple-deep);
+    }
+
+    .split-content {
+      position: relative;
+      z-index: 20;
+      /* Above image */
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .split-card.primary .split-content {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .split-card.secondary .split-content {
+      align-items: flex-end;
+      text-align: right;
+    }
+
+    .split-logo {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+    }
+
+    .split-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .split-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: transform 0.2s ease, opacity 0.2s;
+    }
+
+    .split-card.primary .split-link {
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .split-card.secondary .split-link {
+      color: var(--purple-deep);
+      border: 1px solid rgba(26, 15, 46, 0.2);
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .split-link:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    /* Images */
+    .split-image {
+      position: absolute;
+      bottom: 0;
+      height: auto;
+      width: auto;
+      max-height: 140%;
+      /* Overflowing height */
+      pointer-events: none;
+      /* Click through */
+      z-index: 15;
+      /* Below text (20) */
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+      opacity: 1;
+    }
+
+    .split-card.primary .split-image {
+      right: 5%;
+      max-height: 150%;
+    }
+
+    .split-card.secondary .split-image {
+      left: 5%;
+      max-height: 150%;
+    }
+
+    /* Mobile Simplification */
+    @media (max-width: 767px) {
+      .split-card {
+        min-height: auto;
+        padding: 2.5rem 1.5rem;
+        overflow: hidden;
+        /* No overflow on mobile for simplicity */
+        align-items: center;
+        text-align: center !important;
+      }
+
+      .split-card.primary .split-content,
+      .split-card.secondary .split-content {
+        align-items: center;
+        text-align: center;
+      }
+
+      .split-image {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        left: auto;
+        max-height: 200px;
+        margin-top: 1.5rem;
+        z-index: 1;
+      }
+    }
   </style>
 </head>
 
@@ -854,7 +1042,8 @@
       <div class="container">
         <div class="nav-inner">
           <a href="#" class="logo" aria-label="LeyApp - Inicio">
-            <img src="leyapp-logo-landscape.png" alt="LeyApp" class="logo-image" width="192" height="60">
+            <img src="leyapp-logo-landscape.png" alt="LeyApp - Encuentra Abogados en tu Idioma" class="logo-image"
+              width="192" height="60">
           </a>
           <div class="nav-right">
             <div class="lang-selector">
@@ -1006,16 +1195,30 @@
       </div>
     </section>
 
-    <section class="section" aria-label="Especialidades">
+    <section class="section" aria-label="Especialidades y Servicios Legales">
       <div class="container">
         <div class="specialties" id="specialtiesList">
           <span class="specialty-tag">Visados de Trabajo</span>
-          <span class="specialty-tag">Golden Visa</span>
-          <span class="specialty-tag">Nómada Digital</span>
-          <span class="specialty-tag">Residencia</span>
-          <span class="specialty-tag">Ciudadanía</span>
+          <span class="specialty-tag">Golden Visa España</span>
+          <span class="specialty-tag">Nómada Digital Visa</span>
+          <span class="specialty-tag">Residencia y Extranjería</span>
+          <span class="specialty-tag">Ciudadanía Española</span>
           <span class="specialty-tag">Reagrupación Familiar</span>
-          <span class="specialty-tag">Asilo</span>
+          <span class="specialty-tag">Asilo y Protección</span>
+        </div>
+        <div class="seo-text-block"
+          style="margin-top: 3rem; text-align: center; color: #64748b; font-size: 1rem; line-height: 1.8; max-width: 800px; margin-left: auto; margin-right: auto;">
+          <p>
+            En <strong>LeyApp</strong>, facilitamos la conexión con los mejores <strong>abogados de extranjería en
+              España</strong>. Ya sea que busques <strong>English speaking lawyers in Barcelona</strong> o especialistas
+            en la <strong>Digital Nomad Visa</strong>, nuestra plataforma te ofrece acceso a profesionales verificados
+            por el Colegio de Abogados.
+          </p>
+          <p style="margin-top: 1rem;">
+            Prepárate para la <strong>Regularización de Extranjeros 2026</strong> en España con asesoría legal experta.
+            Desde trámites de <strong>arraigo social</strong> hasta la obtención de la <strong>Golden Visa</strong>,
+            LeyApp es tu aliado para una <strong>relocation</strong> exitosa en España.
+          </p>
         </div>
       </div>
     </section>
@@ -1070,8 +1273,9 @@
     </section>
   </main>
 
-  <section class="section mobile-app-section" aria-labelledby="mobile-title">
-    <div class="container text-center">
+  <section class="section mobile-app-section" aria-labelledby="mobile-title"
+    style="padding-bottom: 9rem; position: relative; overflow: hidden;">
+    <div class="container text-center" style="position: relative; z-index: 2;">
       <h2 class="section-title" id="mobileTitle">Próximamente en tu móvil</h2>
       <p style="max-width:600px;margin:0 auto;color:var(--purple-mid)" id="mobileDesc">Lleva LeyApp contigo. Únete a la
         beta para acceso anticipado.</p>
@@ -1087,6 +1291,38 @@
         </a>
       </div>
       <a href="#waitlist" class="btn-secondary" id="mobileBetaBtn">Unirme a la Beta</a>
+    </div>
+
+    <!-- Vector Art Filling Space -->
+    <svg class="vector-art" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+      style="position: absolute; bottom: 0; left: 0; width: 100%; height: auto; opacity: 0.1; z-index: 1; pointer-events: none;">
+      <path fill="#2D1B4E" fill-opacity="1"
+        d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg>
+  </section>
+
+  <section class="split-nav-section" aria-label="About and Who We Are">
+    <!-- About Us Section -->
+    <div class="split-card primary">
+      <div class="split-content">
+        <img src="leyapp-logo-blue.png" class="split-logo" alt="LeyApp Blue Logo">
+        <h3 class="split-title" id="splitAboutTitle">Sobre Nosotros</h3>
+        <a href="about.html" class="split-link" id="splitAboutLink">Sobre Nosotros &rarr;</a>
+      </div>
+      <!-- Placeholder Team Image -->
+      <img src="leyapp_team.png" class="split-image" alt="LeyApp Team" role="presentation">
+    </div>
+
+    <!-- Who We Are Section -->
+    <div class="split-card secondary">
+      <div class="split-content">
+        <img src="leyapp-icon-purple.png" class="split-logo" alt="LeyApp Purple Icon">
+        <h3 class="split-title" id="splitWhoTitle">¿Para quién es LeyApp?</h3>
+        <a href="who.html" class="split-link" id="splitWhoLink">Saber más &rarr;</a>
+      </div>
+      <!-- Community Image -->
+      <img src="leyapp_community.png" class="split-image" alt="LeyApp Community" role="presentation">
     </div>
   </section>
 
@@ -1129,6 +1365,9 @@
       </div>
 
       <div class="footer-legal" style="font-size: 0.8rem; margin-top: 1rem;">
+        <a href="/who.html" id="whoLink"
+          style="color: rgba(255,255,255,0.4); text-decoration: none; margin: 0 8px;">¿Para quién es LeyApp?</a>
+        <span style="color: rgba(255,255,255,0.4);">|</span>
         <a href="/about.html" id="aboutLink"
           style="color: rgba(255,255,255,0.4); text-decoration: none; margin: 0 8px;">Sobre Nosotros</a>
         <span style="color: rgba(255,255,255,0.4);">|</span>
@@ -1155,7 +1394,80 @@
 
 
 
-    const T = { es: { dir: "ltr", badge: "Próximamente en Barcelona", title: "Encuentra un abogado en tu idioma y reserva una consulta", subtitle: "Conectamos extranjeros con abogados verificados en España. Busca por especialidad, idioma y ubicación.", cta: "Únete a la Lista de Espera", ctaLawyer: "¿Eres abogado?", newsBadge: "Noticia Importante", newsTitle: "Regularización Masiva 2026", newsDesc: "España regularizará a 500.000 extranjeros a partir de abril 2026. Prepárate con tiempo.", newsCta: "Avísame cuando empiece", benefitsTitle: "¿Por qué elegir LeyApp?", benefits: [{ icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>', title: "En tu idioma", desc: "Abogados que hablan español, inglés, francés, árabe y más." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>', title: "Verificados", desc: "Todos verificados por el Colegio de Abogados de España." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>', title: "Chatea primero", desc: "Explica tu caso antes de reservar una consulta." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>', title: "Reserva fácil", desc: "Elige fecha y hora. Confirmación instantánea." }], stepsTitle: "Cómo funciona", steps: [{ num: "1", title: "Busca", desc: "Filtra por especialidad, idioma y ciudad" }, { num: "2", title: "Contacta", desc: "Chatea para resolver dudas o reserva directamente" }, { num: "3", title: "Reserva", desc: "Elige horario y paga de forma segura" }], specialties: ["Visados de Trabajo", "Golden Visa", "Nómada Digital", "Residencia", "Ciudadanía", "Reagrupación Familiar", "Asilo"], lawyersTitle: "¿Eres abogado?", lawyersSubtitle: "Únete a LeyApp y recibe clientes que necesitan tu ayuda", lawyerBenefits: ["Clientes verificados", "Gestiona tu agenda", "Cobros seguros", "Sin cuotas mensuales"], lawyersCta: "Registrar mi despacho", mobileTitle: "Próximamente en tu móvil", mobileDesc: "Lleva LeyApp contigo. Únete a la beta para acceso anticipado.", mobileBetaBtn: "Unirme a la Beta", waitlistTitle: "Sé el primero en enterarte", waitlistSubtitle: "Te avisaremos cuando lancemos en Barcelona", waitlistPlaceholder: "tu@email.com", waitlistBtn: "Unirme", waitlistSuccess: "¡Gracias! Te avisaremos pronto.", waitlistPrivacy: "Respetamos tu privacidad. Sin spam.", footerTagline: "Conectando extranjeros con abogados de confianza", footerCopyright: "© 2026 LeyApp. Todos los derechos reservados.", aboutLink: "Sobre Nosotros", legalLink: "Aviso Legal y Privacidad" }, en: { dir: "ltr", badge: "Coming Soon to Barcelona", title: "Find a lawyer in your language and book a consultation", subtitle: "We connect foreigners with verified lawyers in Spain. Search by specialty, language, and location.", cta: "Join the Waitlist", ctaLawyer: "Are you a lawyer?", newsBadge: "Important News", newsTitle: "Massive 2026 Regularization", newsDesc: "Spain will regularize 500,000 foreigners starting April 2026. Get ready in advance.", newsCta: "Notify me when it starts", benefitsTitle: "Why choose LeyApp?", benefits: [{ icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>', title: "Your language", desc: "Lawyers who speak Spanish, English, French, Arabic and more." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>', title: "Verified", desc: "All verified by the Spanish Bar Association." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>', title: "Chat first", desc: "Explain your case before booking a consultation." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>', title: "Easy booking", desc: "Choose date and time. Instant confirmation." }], stepsTitle: "How it works", steps: [{ num: "1", title: "Search", desc: "Filter by specialty, language and city" }, { num: "2", title: "Contact", desc: "Send a message or book directly" }, { num: "3", title: "Book", desc: "Choose a time and pay securely" }], specialties: ["Work Permits", "Golden Visa", "Digital Nomad", "Residency", "Citizenship", "Family Reunification", "Asylum"], lawyersTitle: "Are you an immigration lawyer?", lawyersSubtitle: "Join LeyApp and receive clients who need your help", lawyerBenefits: ["Verified clients", "Manage your schedule", "Secure payments", "No monthly fees"], lawyersCta: "Register my practice", mobileTitle: "Coming Soon to Mobile", mobileDesc: "Experience LeyApp on the go. Join the beta to get early access.", mobileBetaBtn: "Join Beta", waitlistTitle: "Be the first to know", waitlistSubtitle: "We'll notify you when we launch in Barcelona", waitlistPlaceholder: "your@email.com", waitlistBtn: "Join", waitlistSuccess: "Thank you! We'll notify you soon.", waitlistPrivacy: "We respect your privacy. No spam.", footerTagline: "Connecting foreigners with trusted lawyers", footerCopyright: "© 2026 LeyApp. All rights reserved.", aboutLink: "About Us", legalLink: "Legal Notice & Privacy" }, fr: { dir: "ltr", badge: "Bientôt à Barcelone", title: "Trouvez un avocat dans votre langue et réservez une consultation", subtitle: "Nous connectons les étrangers avec des avocats vérifiés en Espagne.", cta: "Rejoindre la liste d'attente", ctaLawyer: "Vous êtes avocat ?", newsBadge: "Information Importante", newsTitle: "Régularisation Massive 2026", newsDesc: "L'Espagne régularisera 500 000 étrangers à partir d'avril 2026. Préparez-vous.", newsCta: "Prévenez-moi", benefitsTitle: "Pourquoi choisir LeyApp ?", benefits: [{ icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>', title: "Votre langue", desc: "Avocats parlant espagnol, anglais, français, arabe et plus." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>', title: "Vérifiés", desc: "Tous vérifiés par le Barreau espagnol." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>', title: "Chattez d'abord", desc: "Expliquez votre cas avant de réserver." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>', title: "Réservation facile", desc: "Choisissez date et heure. Confirmation instantanée." }], stepsTitle: "Comment ça marche", steps: [{ num: "1", title: "Recherchez", desc: "Filtrez par spécialité, langue et ville" }, { num: "2", title: "Contactez", desc: "Envoyez un message ou réservez directement" }, { num: "3", title: "Réservez", desc: "Choisissez un horaire et payez en sécurité" }], specialties: ["Permis de Travail", "Golden Visa", "Nomade Digital", "Résidence", "Citoyenneté", "Regroupement Familial", "Asile"], lawyersTitle: "Vous êtes avocat ?", lawyersSubtitle: "Rejoignez LeyApp et recevez des clients qui ont besoin de vous", lawyerBenefits: ["Clients vérifiés", "Gérez votre agenda", "Paiements sécurisés", "Sans frais mensuels"], lawyersCta: "Inscrire mon cabinet", mobileTitle: "Bientôt sur mobile", mobileDesc: "Emportez LeyApp avec vous. Rejoignez la bêta pour un accès anticipé.", mobileBetaBtn: "Rejoindre la Bêta", waitlistTitle: "Soyez le premier informé", waitlistSubtitle: "Nous vous préviendrons lors de notre lancement à Barcelone", waitlistPlaceholder: "votre@email.com", waitlistBtn: "Rejoindre", waitlistSuccess: "Merci ! Nous vous préviendrons bientôt.", waitlistPrivacy: "Nous respectons votre vie privée. Pas de spam.", footerTagline: "Connecter les étrangers avec des avocats de confiance", footerCopyright: "© 2026 LeyApp. Tous droits réservés.", aboutLink: "À Propos", legalLink: "Mentions Légales" }, ar: { dir: "rtl", badge: "قريباً في برشلونة", title: "ابحث عن محامٍ بلغتك واحجز استشارة", subtitle: "نربط الأجانب بمحامين معتمدين في إسبانيا. ابحث حسب التخصص واللغة والموقع.", cta: "انضم لقائمة الانتظار", ctaLawyer: "هل أنت محامٍ؟", newsBadge: "خبر هام", newsTitle: "تسوية أوضاع 2026", newsDesc: "إسبانيا ستمنح الإقامة لـ 500,000 أجنبي بدءاً من أبريل 2026. استعد مبكراً.", newsCta: "أعلمني عند البدء", benefitsTitle: "لماذا تختار LeyApp؟", benefits: [{ icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>', title: "بلغتك", desc: "محامون يتحدثون الإسبانية والإنجليزية والفرنسية والعربية." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>', title: "معتمدون", desc: "جميعهم معتمدون من نقابة المحامين الإسبانية." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>', title: "تواصل أولاً", desc: "اشرح قضيتك قبل حجز استشارة." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>', title: "حجز سهل", desc: "اختر التاريخ والوقت. تأكيد فوري." }], stepsTitle: "كيف يعمل", steps: [{ num: "١", title: "ابحث", desc: "فلتر حسب التخصص واللغة والمدينة" }, { num: "٢", title: "تواصل", desc: "أرسل رسالة أو احجز مباشرة" }, { num: "٣", title: "احجز", desc: "اختر موعداً وادفع بأمان" }], specialties: ["تصاريح العمل", "التأشيرة الذهبية", "البدو الرقميين", "الإقامة", "الجنسية", "لم شمل الأسرة", "اللجوء"], lawyersTitle: "هل أنت محامي هجرة؟", lawyersSubtitle: "انضم إلى LeyApp واستقبل عملاء يحتاجون مساعدتك", lawyerBenefits: ["عملاء موثقون", "أدر جدولك", "مدفوعات آمنة", "بدون رسوم شهرية"], lawyersCta: "سجّل مكتبي", mobileTitle: "قريباً على الجوال", mobileDesc: "احمل LeyApp معك. انضم للنسخة التجريبية.", mobileBetaBtn: "انضم للتجربة", waitlistTitle: "كن أول من يعلم", waitlistSubtitle: "سنُعلمك عند إطلاقنا في برشلونة", waitlistPlaceholder: "بريدك@الإلكتروني.com", waitlistBtn: "انضم", waitlistSuccess: "شكراً! سنُعلمك قريباً.", waitlistPrivacy: "نحترم خصوصيتك. لا رسائل مزعجة.", footerTagline: "ربط الأجانب بمحامين موثوقين", footerCopyright: "© 2026 LeyApp. جميع الحقوق محفوظة.", aboutLink: "من نحن", legalLink: "الشروط والخصوصية" } };
+    const T = {
+      es: { dir: "ltr", badge: "Próximamente en Barcelona", title: "Encuentra un abogado en tu idioma y reserva una consulta", subtitle: "Conectamos extranjeros con abogados verificados en España. Busca por especialidad, idioma y ubicación.", cta: "Únete a la Lista de Espera", ctaLawyer: "¿Eres abogado?", newsBadge: "Noticia Importante", newsTitle: "Regularización Masiva 2026", newsDesc: "España regularizará a 500.000 extranjeros a partir de abril 2026. Prepárate con tiempo.", newsCta: "Avísame cuando empiece", benefitsTitle: "¿Por qué elegir LeyApp?", benefits: [{ icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>', title: "En tu idioma", desc: "Abogados que hablan español, inglés, francés, árabe y más." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>', title: "Verificados", desc: "Todos verificados por el Colegio de Abogados de España." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>', title: "Chatea primero", desc: "Explica tu caso antes de reservar una consulta." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>', title: "Reserva fácil", desc: "Elige fecha y hora. Confirmación instantánea." }], stepsTitle: "Cómo funciona", steps: [{ num: "1", title: "Busca", desc: "Filtra por especialidad, idioma y ciudad" }, { num: "2", title: "Contacta", desc: "Chatea para resolver dudas o reserva directamente" }, { num: "3", title: "Reserva", desc: "Elige horario y paga de forma segura" }], specialties: ["Visados de Trabajo", "Golden Visa España", "Nómada Digital Visa", "Residencia y Extranjería", "Ciudadanía Española", "Reagrupación Familiar", "Asilo y Protección"], seoContent: `<p>En <strong>LeyApp</strong>, facilitamos la conexión con los mejores <strong>abogados de extranjería en España</strong>. Ya sea que busques <strong>English speaking lawyers in Barcelona</strong> o especialistas en la <strong>Digital Nomad Visa</strong>, nuestra plataforma te ofrece acceso a profesionales verificados.</p><p style="margin-top: 1rem;">Prepárate para la <strong>Regularización de Extranjeros 2026</strong> en España con asesoría legal experta. Desde trámites de <strong>arraigo social</strong> hasta la obtención de la <strong>Golden Visa</strong>, LeyApp es tu aliado.</p>`, lawyersTitle: "¿Eres abogado?", lawyersSubtitle: "Únete a LeyApp y recibe clientes que necesitan tu ayuda", lawyerBenefits: ["Clientes verificados", "Gestiona tu agenda", "Cobros seguros", "Sin cuotas mensuales"], lawyersCta: "Registrar mi despacho", mobileTitle: "Próximamente en tu móvil", mobileDesc: "Lleva LeyApp contigo. Únete a la beta para acceso anticipado.", mobileBetaBtn: "Unirme a la Beta", waitlistTitle: "Sé el primero en enterarte", waitlistSubtitle: "Te avisaremos cuando lancemos en Barcelona", waitlistPlaceholder: "tu@email.com", waitlistBtn: "Unirme", waitlistSuccess: "¡Gracias! Te avisaremos pronto.", waitlistPrivacy: "Respetamos tu privacidad. Sin spam.", footerTagline: "Conectando extranjeros con abogados de confianza", footerCopyright: "© 2026 LeyApp. Todos los derechos reservados.", whoLink: "¿Para quién es LeyApp?", aboutLink: "Sobre Nosotros", legalLink: "Aviso Legal y Privacidad" }, en: { dir: "ltr", badge: "Coming Soon to Barcelona", title: "Find a lawyer in your language and book a consultation", subtitle: "We connect foreigners with verified lawyers in Spain. Search by specialty, language, and location.", cta: "Join the Waitlist", ctaLawyer: "Are you a lawyer?", newsBadge: "Important News", newsTitle: "Massive 2026 Regularization", newsDesc: "Spain will regularize 500,000 foreigners starting April 2026. Get ready in advance.", newsCta: "Notify me when it starts", benefitsTitle: "Why choose LeyApp?", benefits: [{ icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>', title: "Your language", desc: "Lawyers who speak Spanish, English, French, Arabic and more." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>', title: "Verified", desc: "All verified by the Spanish Bar Association." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>', title: "Chat first", desc: "Explain your case before booking a consultation." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>', title: "Easy booking", desc: "Choose date and time. Instant confirmation." }], stepsTitle: "How it works", steps: [{ num: "1", title: "Search", desc: "Filter by specialty, language and city" }, { num: "2", title: "Contact", desc: "Send a message or book directly" }, { num: "3", title: "Book", desc: "Choose a time and pay securely" }], specialties: ["Work Permits", "Golden Visa Spain", "Digital Nomad Visa", "Residency Law", "Citizenship", "Family Reunification", "Asylum"], seoContent: `<p>At <strong>LeyApp</strong>, we make it easy to find the best <strong>immigration lawyers in Spain</strong>. Whether you are looking for <strong>English speaking lawyers in Barcelona</strong> or experts in the <strong>Spanish Digital Nomad Visa</strong>, our platform connects you with verified professionals.</p><p style="margin-top: 1rem;">Get ahead of the <strong>2026 Regularization of foreigners in Spain</strong> with expert legal advice. From <strong>arraigo social</strong> to <strong>Golden Visa</strong> applications, LeyApp is your trusted partner for relocation.</p>`, lawyersTitle: "Are you an immigration lawyer?", lawyersSubtitle: "Join LeyApp and receive clients who need your help", lawyerBenefits: ["Verified clients", "Manage your schedule", "Secure payments", "No monthly fees"], lawyersCta: "Register my practice", mobileTitle: "Coming Soon to Mobile", mobileDesc: "Experience LeyApp on the go. Join the beta to get early access.", mobileBetaBtn: "Join Beta", waitlistTitle: "Be the first to know", waitlistSubtitle: "We'll notify you when we launch in Barcelona", waitlistPlaceholder: "your@email.com", waitlistBtn: "Join", waitlistSuccess: "Thank you! We'll notify you soon.", waitlistPrivacy: "We respect your privacy. No spam.", footerTagline: "Connecting foreigners with trusted lawyers", footerCopyright: "© 2026 LeyApp. All rights reserved.", whoLink: "Who is LeyApp for?", aboutLink: "About Us", legalLink: "Legal Notice & Privacy" }, fr: {
+        dir: "ltr",
+        badge: "Bientôt à Barcelone",
+        title: "Trouvez un avocat dans votre langue et réservez une consultation",
+        subtitle: "Nous connectons les étrangers avec des avocats vérifiés en Espagne. Busca por especialidad, idioma y ubicación.",
+        cta: "Rejoindre la liste d'attente",
+        ctaLawyer: "Vous êtes avocat ?",
+        newsBadge: "Information Importante",
+        newsTitle: "Régularisation Massive 2026",
+        newsDesc: "L'Espagne régularisera 500 000 étrangers à partir d'avril 2026. Préparez-vous.",
+        newsCta: "Prévenez-moi",
+        benefitsTitle: "Pourquoi choisir LeyApp ?",
+        benefits: [{ icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>', title: "Votre langue", desc: "Avocats parlant espagnol, anglais, français, arabe et plus." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>', title: "Vérifiés", desc: "Tous vérifiés par le Barreau espagnol." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>', title: "Chattez d'abord", desc: "Expliquez votre cas avant de réserver." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>', title: "Réservation facile", desc: "Choisissez date et heure. Confirmation instantanée." }],
+        stepsTitle: "Comment ça marche",
+        steps: [{ num: "1", title: "Recherchez", desc: "Filtrez par spécialité, langue et ville" }, { num: "2", title: "Contactez", desc: "Envoyez un message ou réservez directamente" }, { num: "3", title: "Réservez", desc: "Choisissez un horaire et payez en sécurité" }],
+        specialties: ["Permis de Travail", "Golden Visa Espagne", "Nomade Digital Visa", "Résidence", "Citoyenneté", "Regroupement Familial", "Asile"],
+        seoContent: `<p>Chez <strong>LeyApp</strong>, nous facilitons la mise en relation avec les meilleurs <strong>avocats spécialisés en droit des étrangers en Espagne</strong>. Que vous cherchiez des <strong>avocats parlant français à Barcelone</strong> ou des experts du <strong>Visa Nomade Digital</strong>, notre plateforme vous offre l'accès à des professionnels vérifiés.</p>`,
+        lawyersTitle: "Vous êtes avocat ?",
+        lawyersSubtitle: "Rejoignez LeyApp et recevez des clients qui ont besoin de vous",
+        lawyerBenefits: ["Clients vérifiés", "Gérez votre agenda", "Paiements sécurisés", "Sans frais mensuels"],
+        lawyersCta: "Inscrire mon cabinet",
+        mobileTitle: "Bientôt sur mobile",
+        mobileDesc: "Emportez LeyApp with vous. Rejoignez la bêta pour un accès anticipé.",
+        mobileBetaBtn: "Rejoindre la Bêta",
+        waitlistTitle: "Soyez le premier informé",
+        waitlistSubtitle: "Nous vous préviendrons lors de notre lancement à Barcelone",
+        waitlistPlaceholder: "votre@email.com",
+        waitlistBtn: "Rejoindre",
+        waitlistSuccess: "Merci ! Nous vous préviendrons bientôt.",
+        waitlistPrivacy: "Nous respectons votre vie privée. Pas de spam.",
+        footerTagline: "Connecter les étrangers avec des avocats de confianza",
+        footerCopyright: "© 2026 LeyApp. Tous droits réservés.",
+        whoLink: "Pour qui est LeyApp ?",
+        aboutLink: "À Propos",
+        legalLink: "Mentions Légales"
+      },
+      ar: {
+        dir: "rtl",
+        badge: "قريباً في برشلونة",
+        title: "ابحث عن محامٍ بلغتك واحجز استشارة",
+        subtitle: "نربط الأجانب بمحامين معتمدين في إسبانيا. ابحث حسب التخصص واللغة والموقع.",
+        cta: "انضم لقائمة الانتظار",
+        ctaLawyer: "هل أنت محامٍ؟",
+        newsBadge: "خبر هام",
+        newsTitle: "تسوية أوضاع 2026",
+        newsDesc: "إسبانيا ستمنح الإقامة لـ 500,000 أجنبي بدءاً من أبريل 2026. استعد مبكراً.",
+        newsCta: "أعلمني عند البدء",
+        benefitsTitle: "لماذا تختار LeyApp؟",
+        benefits: [{ icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>', title: "بلغتك", desc: "محامون يتحدثون الإسبانية والإنجليزية والفرنسية والعربية." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>', title: "معتمدون", desc: "جميعهم معتمدون من نقابة المحامين الإسبانية." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>', title: "تواصل أولاً", desc: "اشرح قضيتك قبل حجز استشارة." }, { icon: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>', title: "حجز سهل", desc: "اختر التاريخ والوقت. تأكيد فوري." }],
+        stepsTitle: "كيف يعمل",
+        steps: [{ num: "١", title: "ابحث", desc: "فلتر حسب التخصص واللغة والمدينة" }, { num: "٢", title: "تواصل", desc: "أرسل رسالة أو احجز مباشرة" }, { num: "٣", title: "احجز", desc: "اختر موعداً وادفع بأمان" }],
+        specialties: ["تصاريح العمل", "التأشيرة الذهبية", "البدو الرقميين", "الإقامة", "الجنسية", "لم شمل الأسرة", "اللجوء"],
+        seoContent: `<p>في <strong>LeyApp</strong>، نسهل عليك التواصل مع أفضل <strong>محامي الهجرة في إسبانيا</strong>. سواء كنت تبحث عن <strong>محامين يتحدثون العربية في برشلونة</strong> أو خبراء في <strong>تأشيرة الرحالة الرقمي</strong>، فإن منصتنا تمنحك الوصول إلى مهنيين معتمدين.</p>`,
+        lawyersTitle: "هل أنت محامي هجرة؟",
+        lawyersSubtitle: "انضم إلى LeyApp واستقبل عملاء يحتاجون مساعدتك",
+        lawyerBenefits: ["عملاء موثقون", "أدر جدولك", "مدفوعات آمنة", "بدون رسوم شهرية"],
+        lawyersCta: "سجّل مكتبي",
+        mobileTitle: "قريباً على الجوال",
+        mobileDesc: "احمل LeyApp معك. انضم للنسخة التجريبية.",
+        mobileBetaBtn: "انضم للتجربة",
+        waitlistTitle: "كن أول من يعلم",
+        waitlistSubtitle: "سنُعلمك عند إطلاقنا في برشلونة",
+        waitlistPlaceholder: "بريدك@الإلكتروني.com",
+        waitlistBtn: "انضم",
+        waitlistSuccess: "شكراً! سنُعلمك قريباً.",
+        waitlistPrivacy: "نحترم خصوصيتك. لا رسائل مزعجة.",
+        footerTagline: "ربط الأجانب بمحامين موثوقين",
+        footerCopyright: "© 2026 LeyApp. جميع الحقوق محفوظة.",
+        whoLink: "لمن LeyApp؟",
+        aboutLink: "من نحن",
+        legalLink: "الشروط والخصوصية"
+      }
+    };
     const L = { es: { name: 'Español', flag: '<img src="flags/es.svg" alt="Español" class="lang-flag">' }, en: { name: 'English', flag: '<img src="flags/gb.svg" alt="English" class="lang-flag">' }, fr: { name: 'Français', flag: '<img src="flags/fr.svg" alt="Français" class="lang-flag">' }, ar: { name: 'العربية', flag: '<img src="flags/sa.svg" alt="العربية" class="lang-flag">' } };
     function detectLang() {
       const urlParam = new URLSearchParams(location.search).get('lang');
@@ -1223,6 +1535,13 @@
 
       // Lawyers & Mobile
       setHtml('specialtiesList', t.specialties.map(s => `<span class="specialty-tag">${s}</span>`).join(''));
+
+      // Update localized SEO content
+      const seoBlock = document.querySelector('.seo-text-block');
+      if (seoBlock && t.seoContent) {
+        seoBlock.innerHTML = t.seoContent;
+      }
+
       setTxt('lawyers-title', t.lawyersTitle);
       setTxt('lawyersSubtitle', t.lawyersSubtitle);
       setHtml('lawyerBenefits', t.lawyerBenefits.map(b => `<li class="lawyer-benefit"><div class="lawyer-benefit-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></div><span>${b}</span></li>`).join(''));
@@ -1247,8 +1566,15 @@
       document.querySelectorAll('.lang-option').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
       setAttr('appStoreBadge', 'src', `iosStore/${l}.svg`);
       setAttr('googlePlayBadge', 'src', `googlePlay/${l}.svg`);
+      setTxt('whoLink', t.whoLink);
       setTxt('aboutLink', t.aboutLink);
       setTxt('legalLink', t.legalLink);
+
+      // Update Split Nav Section
+      setTxt('splitAboutTitle', t.aboutLink);
+      setTxt('splitAboutLink', t.aboutLink + ' →');
+      setTxt('splitWhoTitle', t.whoLink);
+      setTxt('splitWhoLink', t.whoLink + ' →'); // Or "Saber más" / "Learn more" if I had keys, but reusing title is safer for now.
     }
     document.addEventListener('DOMContentLoaded', () => {
       // Cookie Consent Logic
