@@ -894,7 +894,7 @@
     .split-card {
       flex: 1;
       position: relative;
-      padding: 3rem 2rem 1rem 2rem;
+      padding: 6rem 2rem 1rem 2rem;
       min-height: 250px;
       /* Not too tall */
       display: flex;
@@ -992,8 +992,9 @@
       /* Click through */
       z-index: 15;
       /* Below text (20) */
-      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
-      opacity: 1;
+      filter: grayscale(100%) brightness(1.1) contrast(0.9) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+      opacity: 0.9;
+      mix-blend-mode: luminosity;
     }
 
     .split-card.primary .split-image {
@@ -1294,15 +1295,43 @@
     </div>
 
     <!-- Vector Art Filling Space -->
-    <svg class="vector-art" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-      style="position: absolute; bottom: 0; left: 0; width: 100%; height: auto; opacity: 0.1; z-index: 1; pointer-events: none;">
-      <path fill="#2D1B4E" fill-opacity="1"
+    <!-- <svg class="vector-art" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+      style="position: absolute; bottom: 0; left: 0; width: 100%; height: 120px; opacity: 0.1; z-index: 1; pointer-events: none;">
+      <defs>
+        <linearGradient id="vectorGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:var(--purple-rich);stop-opacity:1" />
+          <stop offset="100%" style="stop-color:var(--teal-bright);stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <path fill="url(#vectorGradient)" fill-opacity="1"
+        d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg> -->
+  </section>
+
+  <section class="split-nav-section" aria-label="About and Who We Are" style="margin-top: -1px;">
+    <!-- Middle Fluffy Wave Bridge -->
+    <!-- <svg class="middle-wave" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 180px; z-index: 9; transform: scaleY(-1) translateY(40px); opacity: 0.15; pointer-events: none;">
+      <defs>
+        <linearGradient id="fluffyGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:var(--purple-mid);stop-opacity:1" />
+          <stop offset="100%" style="stop-color:var(--teal-glow);stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <path fill="url(#fluffyGradient)" fill-opacity="1"
+        d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg> -->
+
+    <!-- Curved Top Divider -->
+    <svg class="section-divider" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100px; z-index: 10; transform: scaleY(-1); pointer-events: none;">
+      <path fill="var(--cream)" fill-opacity="1"
         d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
       </path>
     </svg>
-  </section>
 
-  <section class="split-nav-section" aria-label="About and Who We Are">
     <!-- About Us Section -->
     <div class="split-card primary">
       <div class="split-content">
